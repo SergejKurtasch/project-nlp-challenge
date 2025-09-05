@@ -1,39 +1,104 @@
-![logo_ironhack_blue 7](https://user-images.githubusercontent.com/23629340/40541063-a07a0a8a-601a-11e8-91b5-2f13e4e6b441.png)
+# NLP Challenge - Fake News Classification
 
-# PROJECT | Natural Language Processing Challenge
+A comprehensive project for fake news classification using various machine learning methods and natural language processing techniques.
 
-## Introduction
+## Project Structure
 
-Learning how to process text is a skill required for Data Scientists/AI Engineers. 
+### Jupyter Notebooks
+- `1. data_exploration.ipynb` - Data exploration and analysis
+- `2.1 enhanced_classifier.ipynb` - Enhanced classifier implementation
+- `2.2 embeddings_classifier.ipynb` - Classifier with word embeddings
+- `2.3 embeddings_advanced_classifier.ipynb` - Advanced classifier with embeddings
+- `2.4 enhanced_classifier_minus_reuters.ipynb` - Classifier excluding Reuters data
+- `2.5 Final_classifier_and_XGBoost.ipynb` - Final classifier with XGBoost
+- `3. models_comparison.ipynb` - Model comparison and evaluation
 
-In this project, you will put these skills into practice to identify whether a news headline is real or fake news.
+### Scripts
+- `setup.sh` - Environment setup script
+- `start_notebook.sh` - Jupyter Notebook startup script
 
-## Project Overview
+## Installation and Setup
 
-In the file `dataset/data.csv`, you will find a dataset containing news articles with the following columns:
+1. Clone the repository:
+```bash
+git clone <repository-url>
+cd project-nlp-challenge
+```
 
-- **`label`**: 0 if the news is fake, 1 if the news is real.
-- **`title`**: The headline of the news article.
-- **`text`**: The full content of the article.
-- **`subject`**: The category or topic of the news.
-- **`date`**: The publication date of the article.
+2. Create a virtual environment:
+```bash
+python -m venv venv
+source venv/bin/activate  # On macOS/Linux
+# or
+venv\Scripts\activate  # On Windows
+```
 
-Your goal is to build a classifier that is able to distinguish between the two.
+3. Install dependencies:
+```bash
+pip install -r requirements.txt
+```
 
-Once you have a classifier built, then use it to predict the labels for `dataset/validation_data.csv`. Generate a new file
-where the label `2` has been replaced by `0` (fake) or `1` (real) according to your model. Please respect the original file format, 
-do not include extra columns, and respect the column separator. 
+4. Start Jupyter Notebook:
+```bash
+jupyter notebook
+```
 
-Please ensure to split the `data.csv` into **training** and **test** datasets before using it for model training or evaluation.
+## Project Description
 
-## Guidance
+This project presents a comprehensive study of fake news classification methods, including:
 
-Like in a real life scenario, you are able to make your own choices and text treatment.
-Use the techniques you have learned and the common packages to process this data and classify the text.
+- Text data analysis and preprocessing
+- Feature extraction using TF-IDF
+- Word embeddings implementation
+- Application of various machine learning algorithms
+- Performance comparison of different approaches
 
-## Deliverables
+## Key Features
 
-1. **Python Code:** Provide well-documented Python code that conducts the analysis.
-2. **Predictions:** A csv file in the same format as `validation_data.csv` but with the predicted labels (0 or 1)
-3. **Accuracy estimation:** Provide the teacher with your estimation of how your model will perform.
-4. **Presentation:** You will present your model in a 10-minute presentation. Your teacher will provide further instructions.
+- **Data Exploration**: Comprehensive analysis of the dataset structure and characteristics
+- **Feature Engineering**: Multiple approaches to text feature extraction
+- **Model Variety**: Implementation of traditional ML and advanced techniques
+- **Performance Evaluation**: Detailed comparison of model performance metrics
+- **Reproducible Research**: Well-documented notebooks with clear methodology
+
+## Methodology
+
+The project follows a systematic approach:
+
+1. **Data Analysis**: Understanding the dataset structure and quality
+2. **Preprocessing**: Text cleaning, tokenization, and normalization
+3. **Feature Extraction**: TF-IDF, word embeddings, and custom features
+4. **Model Training**: Multiple algorithms including Logistic Regression, SVM, and XGBoost
+5. **Evaluation**: Comprehensive performance metrics and comparison
+
+## Results
+
+The project demonstrates various approaches to fake news classification and compares their effectiveness across different metrics including accuracy, precision, recall, and F1-score.
+
+## Technologies Used
+
+- **Python 3.x** - Core programming language
+- **Jupyter Notebook** - Interactive development environment
+- **scikit-learn** - Machine learning library
+- **pandas** - Data manipulation and analysis
+- **numpy** - Numerical computing
+- **matplotlib & seaborn** - Data visualization
+- **XGBoost** - Gradient boosting framework
+- **NLTK** - Natural language processing toolkit
+- **spaCy** - Advanced NLP library
+
+## Dataset
+
+The project uses a curated dataset of news articles labeled as real or fake, providing a solid foundation for training and evaluation of classification models.
+
+## Contributing
+
+This is a research project showcasing various NLP and ML techniques for fake news detection. Feel free to explore the notebooks and adapt the methods for your own use cases.
+
+## Author
+
+Sergej
+
+## License
+
+This project is for educational and research purposes.
